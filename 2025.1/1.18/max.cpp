@@ -4,7 +4,7 @@
 using namespace std;
 
 int main()
-#define  int long long
+#define int long long
 {
     int n, a, b;
     cin >> n >> a >> b;
@@ -28,7 +28,7 @@ int main()
         }
     }
     int m = k;
-    for (int i = a - 1; i < n-1; i++)
+    for (int i = a - 1; i < n - 1; i++)
     {
         if (q[i] == q[i + 1])
         {
@@ -48,6 +48,7 @@ int main()
     ans = ans / a;
     int x = ans;
     int y = (ans - x) * 1000000;
+
     if (ans == x)
     {
         cout << x << ".000000" << endl;
@@ -57,7 +58,6 @@ int main()
         cout << x << '.' << y << endl;
     }
 
-   
     /*long long ns = 1;
     int z = m;
     if (ans == q[a - 1])
@@ -76,9 +76,9 @@ int main()
                 d++;
                 n--;
             }
-            
+
             as = ns + as;
-            
+
         }cout << as ;
     }*/
     long long ns = 1;
@@ -88,29 +88,32 @@ int main()
         int as = 0;
         for (int i = a; i <= b; i++)
         {
-           int n = i;
-           int d = 1;
+            int n = i;
+            int d = 1;
             m = z;
-            ns=1;
-            while (n > 0){
-            ns = ns * m / d;
-            m--;
-            d++;
-            n--;} 
-        as = ns + as;
+            ns = 1;
+            while (n > 0)
+            {
+                ns = ns * m / d;
+                m--;
+                d++;
+                n--;
+            }
+            as = ns + as;
         }
-      
+
         cout << as;
     }
-    else{
-    n = 1;
-    while (k > 0)
+    else
     {
-        ns = ns * m / n;
-        m--;
-        n++;
-        k--;
-    }
-    cout << ns;
+        n = 1;
+        while (k > 0)
+        {
+            ns = ns * m / n;
+            m--;
+            n++;
+            k--;
+        }
+        cout << ns;
     }
 }
